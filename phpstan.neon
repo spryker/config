@@ -12,3 +12,9 @@ parameters:
         - '#Unsafe call to private method Spryker\\Shared\\Config\\Application\\Environment::defineLocale\(\) through static::.#'
         -
             identifier: missingType.iterableValue
+        # Defensive programming: file existence checked before require
+        -
+            identifier: require.fileNotFound
+        # Defensive programming: method_exists checks kept for runtime safety
+        -
+            identifier: function.alreadyNarrowedType

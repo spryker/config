@@ -11,8 +11,6 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 
 /**
  * @method \Spryker\Zed\Config\Business\ConfigBusinessFactory getFactory()
- * @method \Spryker\Zed\Config\Persistence\ConfigRepositoryInterface getRepository()
- * @method \Spryker\Zed\Config\Persistence\ConfigEntityManagerInterface getEntityManager()
  */
 class ConfigFacade extends AbstractFacade implements ConfigFacadeInterface
 {

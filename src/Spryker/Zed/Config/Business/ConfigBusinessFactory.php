@@ -13,8 +13,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 
 /**
  * @method \Spryker\Zed\Config\ConfigConfig getConfig()
- * @method \Spryker\Zed\Config\Persistence\ConfigEntityManagerInterface getEntityManager()
- * @method \Spryker\Zed\Config\Persistence\ConfigRepositoryInterface getRepository()
  */
 class ConfigBusinessFactory extends AbstractBusinessFactory
 {
