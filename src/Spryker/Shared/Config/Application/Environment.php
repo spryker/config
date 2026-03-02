@@ -111,9 +111,6 @@ class Environment
         static::initializeLocale($locale);
     }
 
-    /**
-     * @return void
-     */
     protected static function defineCodeBucket(): void
     {
         if (!defined('APPLICATION_CODE_BUCKET')) {

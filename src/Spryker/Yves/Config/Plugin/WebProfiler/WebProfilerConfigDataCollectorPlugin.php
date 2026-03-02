@@ -67,21 +67,11 @@ class WebProfilerConfigDataCollectorPlugin extends AbstractPlugin implements Web
         return $this;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Symfony\Component\HttpFoundation\Response $response
-     * @param \Throwable|null $exception
-     *
-     * @return void
-     */
     public function collect(Request $request, Response $response, ?Throwable $exception = null): void
     {
         $this->data = Config::getProfileData();
     }
 
-    /**
-     * @return void
-     */
     public function reset(): void
     {
         $this->data = [];

@@ -28,12 +28,6 @@ class ConfigSharedTester extends Actor
 {
     use _generated\ConfigSharedTesterActions;
 
-    /**
-     * @param string $expectedKey
-     * @param array $profileData
-     *
-     * @return void
-     */
     public function assertProfileKey(string $expectedKey, array $profileData): void
     {
         $this->assertArrayHasKey(
@@ -65,12 +59,6 @@ class ConfigSharedTester extends Actor
         $this->assertSame($expected, $profileData[Profiler::PROFILE_DEFAULT]);
     }
 
-    /**
-     * @param int $expectedCount
-     * @param array $profileData
-     *
-     * @return void
-     */
     public function assertProfileCount(int $expectedCount, array $profileData): void
     {
         $this->assertSame(

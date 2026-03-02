@@ -16,9 +16,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class ConfigBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\Config\Business\ConfigProfiler\ConfigProfilerInterface
-     */
     public function createConfigProfiler(): ConfigProfilerInterface
     {
         return new ConfigProfiler();

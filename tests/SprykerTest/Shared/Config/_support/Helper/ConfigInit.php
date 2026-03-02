@@ -13,9 +13,6 @@ use Symfony\Component\Finder\Finder;
 
 class ConfigInit extends Module
 {
-    /**
-     * @return void
-     */
     public function _initialize(): void
     {
         if (isset($this->config['enabled']) && $this->config['enabled']) {
@@ -105,17 +102,11 @@ class ConfigInit extends Module
         $this->writeConfigFile($this->generateConfig());
     }
 
-    /**
-     * @return void
-     */
     private function clearGeneratedConfigFile(): void
     {
         $this->writeConfigFile('');
     }
 
-    /**
-     * @return string
-     */
     private function generateConfig(): string
     {
         $finder = $this->getConfigDefaultFiles();
@@ -152,19 +143,11 @@ class ConfigInit extends Module
         return $finder;
     }
 
-    /**
-     * @param string $fileContent
-     *
-     * @return void
-     */
     private function writeConfigFile(string $fileContent): void
     {
         file_put_contents($this->getConfigFilePath(), $fileContent);
     }
 
-    /**
-     * @return string
-     */
     private function getConfigFilePath(): string
     {
         return $this->getTargetDirectory() . '/config_default-test.php';

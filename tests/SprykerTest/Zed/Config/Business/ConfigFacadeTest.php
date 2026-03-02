@@ -27,9 +27,6 @@ class ConfigFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetProfileDataReturnsAnArrayWithUsedConfigurations(): void
     {
         $this->assertTrue(is_array($this->tester->getFacade()->getProfileData()));

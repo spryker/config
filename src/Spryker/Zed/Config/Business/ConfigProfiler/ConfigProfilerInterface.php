@@ -9,8 +9,5 @@ namespace Spryker\Zed\Config\Business\ConfigProfiler;
 
 interface ConfigProfilerInterface
 {
-    /**
-     * @return array
-     */
     public function getProfileData(): array;
 }

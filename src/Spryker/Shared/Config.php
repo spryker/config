@@ -22,11 +22,6 @@ class Config extends SprykerConfig
         parent::getInstance();
     }
 
-    /**
-     * @param string|null $environmentName
-     *
-     * @return void
-     */
     public static function init(?string $environmentName = null): void
     {
         parent::init($environmentName);

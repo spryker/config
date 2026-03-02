@@ -28,9 +28,6 @@ class EnvironmentTest extends Unit
      */
     protected ConfigSharedTester $tester;
 
-    /**
-     * @return void
-     */
     public function testInitializeDefinesStore(): void
     {
         // Assign
@@ -43,9 +40,6 @@ class EnvironmentTest extends Unit
         $this->assertSame(!$store && $this->tester->isDynamicStoreEnabled(), !defined('APPLICATION_STORE'));
     }
 
-    /**
-     * @return void
-     */
     public function testInitializeDefinesRegion(): void
     {
         if ($this->tester->isDynamicStoreEnabled() === false) {

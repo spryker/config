@@ -11,9 +11,6 @@ use Spryker\Shared\Config\Config;
 
 class ConfigProfiler implements ConfigProfilerInterface
 {
-    /**
-     * @return array
-     */
     public function getProfileData(): array
     {
         return Config::getProfileData();

@@ -31,9 +31,6 @@ class ProfilerTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testWhenConfigHasKeyAddShouldCreateNewProfileDataFromValue(): void
     {
         $profiler = new Profiler();
@@ -45,9 +42,6 @@ class ProfilerTest extends Unit
         $this->tester->assertProfileValue('value', $profileData[static::PROFILE_KEY]);
     }
 
-    /**
-     * @return void
-     */
     public function testWhenConfigValueIsObjectClassNameOfValueShouldBeUsed(): void
     {
         $profiler = new Profiler();
@@ -59,9 +53,6 @@ class ProfilerTest extends Unit
         $this->tester->assertProfileValue(static::class, $profileData[static::PROFILE_KEY]);
     }
 
-    /**
-     * @return void
-     */
     public function testFormatValue(): void
     {
         $profiler = new Profiler();
@@ -84,9 +75,6 @@ class ProfilerTest extends Unit
         $this->assertSame($expectedProfileData, $profileData);
     }
 
-    /**
-     * @return void
-     */
     public function testWhenConfigNotHasKeyAddShouldCreateNewProfileDataFromDefaultValue(): void
     {
         $profiler = new Profiler();
@@ -98,9 +86,6 @@ class ProfilerTest extends Unit
         $this->tester->assertProfileValue(null, $profileData[static::PROFILE_KEY]);
     }
 
-    /**
-     * @return void
-     */
     public function testWhenConfigDefaultValueIsObjectClassNameOfDefaultValueShouldBeUsed(): void
     {
         $profiler = new Profiler();
@@ -112,9 +97,6 @@ class ProfilerTest extends Unit
         $this->tester->assertProfileDefaultValue(static::class, $profileData[static::PROFILE_KEY]);
     }
 
-    /**
-     * @return void
-     */
     public function testWhenProfileDataForKeyExistsAddShouldIncreaseProfileDataCount(): void
     {
         $profiler = new Profiler();

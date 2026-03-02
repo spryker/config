@@ -21,9 +21,6 @@ use Spryker\Shared\Config\Config;
  */
 class ConfigTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testGetInstance(): void
     {
         $this->assertInstanceOf(Config::class, Config::getInstance());

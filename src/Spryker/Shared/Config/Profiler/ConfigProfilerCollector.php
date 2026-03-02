@@ -24,21 +24,11 @@ class ConfigProfilerCollector implements DataCollectorInterface, ConfigProfilerC
      */
     protected $profileData;
 
-    /**
-     * @param array $profileData
-     */
     public function __construct(array $profileData)
     {
         $this->profileData = $profileData;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Symfony\Component\HttpFoundation\Response $response
-     * @param \Throwable|null $exception
-     *
-     * @return void
-     */
     public function collect(Request $request, Response $response, ?Throwable $exception = null): void
     {
     }
@@ -61,9 +51,6 @@ class ConfigProfilerCollector implements DataCollectorInterface, ConfigProfilerC
         return $this->profileData;
     }
 
-    /**
-     * @return void
-     */
     public function reset(): void
     {
         $this->profileData = null;

@@ -128,11 +128,6 @@ class Config
         return static::$config->offsetExists($key);
     }
 
-    /**
-     * @param string|null $environmentName
-     *
-     * @return void
-     */
     public static function init(?string $environmentName = null): void
     {
         $config = new ArrayObject();
@@ -216,9 +211,6 @@ class Config
         return $config;
     }
 
-    /**
-     * @return string
-     */
     private static function getEnvironmentName(): string
     {
         return APPLICATION_ENV;
