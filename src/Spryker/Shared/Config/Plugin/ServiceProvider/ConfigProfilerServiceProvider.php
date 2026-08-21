@@ -126,7 +126,6 @@ class ConfigProfilerServiceProvider implements ServiceProviderInterface
 
             $loaderReflection = new ReflectionObject($loader);
             $pathProperty = $loaderReflection->getProperty('paths');
-            $pathProperty->setAccessible(true);
             $paths = $pathProperty->getValue($loader);
             $paths[] = $pathToTemplates;
             $pathProperty->setValue($loader, $paths);
